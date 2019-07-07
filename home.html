@@ -1,12 +1,663 @@
-<!DOCTYPE html>
-<html lang="en">
+</!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<title>Home</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+    $(function(){
+        var apiSolat = "http://api.aladhan.com/v1/calendarByAddress?address=Yogyakarta&method=2&month=07&year=2019";
+        $.getJSON(apiSolat, function(data,status){
+            $('.1tanggal').html(data.data[0].date.readable);
+            $('.1imsyak').html(data.data[0].timings.Imsak);
+            $('.1subuh').html(data.data[0].timings.Fajr);
+            $('.1dzuhur').html(data.data[0].timings.Dhuhr);
+            $('.1ashar').html(data.data[0].timings.Asr);
+            $('.1magrib').html(data.data[0].timings.Maghrib);
+            $('.1isya').html(data.data[0].timings.Isha);
+            // itu yang diatas baru tanggal 1
+            // tanggal 2 dan seterusnya kamu buat sama kayak diatas
+            // tapi diganti aja indexnya, kalo tanggal satu dimulai dari 0 tanggal 2 dari index 1
+            $('.2tanggal').html(data.data[1].date.readable);
+            $('.2imsyak').html(data.data[1].timings.Imsak);
+            $('.2subuh').html(data.data[1].timings.Fajr);
+            $('.2dzuhur').html(data.data[1].timings.Dhuhr);
+            $('.2ashar').html(data.data[1].timings.Asr);
+            $('.2magrib').html(data.data[1].timings.Maghrib);
+            $('.2isya').html(data.data[1].timings.Isha);
+
+            $('.3tanggal').html(data.data[2].date.readable);
+            $('.3imsyak').html(data.data[2].timings.Imsak);
+            $('.3subuh').html(data.data[2].timings.Fajr);
+            $('.3dzuhur').html(data.data[2].timings.Dhuhr);
+            $('.3ashar').html(data.data[2].timings.Asr);
+            $('.3magrib').html(data.data[2].timings.Maghrib);
+            $('.3isya').html(data.data[2].timings.Isha);
+
+            $('.4tanggal').html(data.data[3].date.readable);
+            $('.4imsyak').html(data.data[3].timings.Imsak);
+            $('.4subuh').html(data.data[3].timings.Fajr);
+            $('.4dzuhur').html(data.data[3].timings.Dhuhr);
+            $('.4ashar').html(data.data[3].timings.Asr);
+            $('.4magrib').html(data.data[3].timings.Maghrib);
+            $('.4isya').html(data.data[3].timings.Isha);
+
+            $('.5tanggal').html(data.data[4].date.readable);
+            $('.5imsyak').html(data.data[4].timings.Imsak);
+            $('.5subuh').html(data.data[4].timings.Fajr);
+            $('.5dzuhur').html(data.data[4].timings.Dhuhr);
+            $('.5ashar').html(data.data[4].timings.Asr);
+            $('.5magrib').html(data.data[4].timings.Maghrib);
+            $('.5isya').html(data.data[4].timings.Isha);
+
+            $('.6tanggal').html(data.data[5].date.readable);
+            $('.6imsyak').html(data.data[5].timings.Imsak);
+            $('.6subuh').html(data.data[5].timings.Fajr);
+            $('.6dzuhur').html(data.data[5].timings.Dhuhr);
+            $('.6ashar').html(data.data[5].timings.Asr);
+            $('.6magrib').html(data.data[5].timings.Maghrib);
+            $('.6isya').html(data.data[5].timings.Isha);
+
+            $('.7tanggal').html(data.data[6].date.readable);
+            $('.7imsyak').html(data.data[6].timings.Imsak);
+            $('.7subuh').html(data.data[6].timings.Fajr);
+            $('.7dzuhur').html(data.data[6].timings.Dhuhr);
+            $('.7ashar').html(data.data[6].timings.Asr);
+            $('.7magrib').html(data.data[6].timings.Maghrib);
+            $('.7isya').html(data.data[6].timings.Isha);
+
+            $('.8tanggal').html(data.data[7].date.readable);
+            $('.8imsyak').html(data.data[7].timings.Imsak);
+            $('.8subuh').html(data.data[7].timings.Fajr);
+            $('.8dzuhur').html(data.data[7].timings.Dhuhr);
+            $('.8ashar').html(data.data[7].timings.Asr);
+            $('.8magrib').html(data.data[7].timings.Maghrib);
+            $('.8isya').html(data.data[7].timings.Isha);
+
+            $('.9tanggal').html(data.data[8].date.readable);
+            $('.9imsyak').html(data.data[8].timings.Imsak);
+            $('.9subuh').html(data.data[8].timings.Fajr);
+            $('.9dzuhur').html(data.data[8].timings.Dhuhr);
+            $('.9ashar').html(data.data[8].timings.Asr);
+            $('.9magrib').html(data.data[8].timings.Maghrib);
+            $('.9isya').html(data.data[8].timings.Isha);
+
+            $('.10tanggal').html(data.data[9].date.readable);
+            $('.10imsyak').html(data.data[9].timings.Imsak);
+            $('.10subuh').html(data.data[9].timings.Fajr);
+            $('.10dzuhur').html(data.data[9].timings.Dhuhr);
+            $('.10ashar').html(data.data[9].timings.Asr);
+            $('.10magrib').html(data.data[9].timings.Maghrib);
+            $('.10isya').html(data.data[9].timings.Isha);
+
+            $('.11tanggal').html(data.data[10].date.readable);
+            $('.11imsyak').html(data.data[10].timings.Imsak);
+            $('.11subuh').html(data.data[10].timings.Fajr);
+            $('.11dzuhur').html(data.data[10].timings.Dhuhr);
+            $('.11ashar').html(data.data[10].timings.Asr);
+            $('.11magrib').html(data.data[10].timings.Maghrib);
+            $('.11isya').html(data.data[10].timings.Isha);
+
+            $('.12tanggal').html(data.data[11].date.readable);
+            $('.12imsyak').html(data.data[11].timings.Imsak);
+            $('.12subuh').html(data.data[11].timings.Fajr);
+            $('.12dzuhur').html(data.data[11].timings.Dhuhr);
+            $('.12ashar').html(data.data[11].timings.Asr);
+            $('.12magrib').html(data.data[11].timings.Maghrib);
+            $('.12isya').html(data.data[11].timings.Isha);
+
+            $('.13tanggal').html(data.data[12].date.readable);
+            $('.13imsyak').html(data.data[12].timings.Imsak);
+            $('.13subuh').html(data.data[12].timings.Fajr);
+            $('.13dzuhur').html(data.data[12].timings.Dhuhr);
+            $('.13ashar').html(data.data[12].timings.Asr);
+            $('.13magrib').html(data.data[12].timings.Maghrib);
+            $('.13isya').html(data.data[12].timings.Isha);
+
+            $('.14tanggal').html(data.data[13].date.readable);
+            $('.14imsyak').html(data.data[13].timings.Imsak);
+            $('.14subuh').html(data.data[13].timings.Fajr);
+            $('.14dzuhur').html(data.data[13].timings.Dhuhr);
+            $('.14ashar').html(data.data[13].timings.Asr);
+            $('.14magrib').html(data.data[13].timings.Maghrib);
+            $('.14isya').html(data.data[13].timings.Isha);
+
+            $('.15tanggal').html(data.data[14].date.readable);
+            $('.15imsyak').html(data.data[14].timings.Imsak);
+            $('.15subuh').html(data.data[14].timings.Fajr);
+            $('.15dzuhur').html(data.data[14].timings.Dhuhr);
+            $('.15ashar').html(data.data[14].timings.Asr);
+            $('.15magrib').html(data.data[14].timings.Maghrib);
+            $('.15isya').html(data.data[14].timings.Isha);
+
+            $('.16tanggal').html(data.data[15].date.readable);
+            $('.16imsyak').html(data.data[15].timings.Imsak);
+            $('.16subuh').html(data.data[15].timings.Fajr);
+            $('.16dzuhur').html(data.data[15].timings.Dhuhr);
+            $('.16ashar').html(data.data[15].timings.Asr);
+            $('.16magrib').html(data.data[15].timings.Maghrib);
+            $('.16isya').html(data.data[15].timings.Isha);
+
+            $('.17tanggal').html(data.data[16].date.readable);
+            $('.17imsyak').html(data.data[16].timings.Imsak);
+            $('.17subuh').html(data.data[16].timings.Fajr);
+            $('.17dzuhur').html(data.data[16].timings.Dhuhr);
+            $('.17ashar').html(data.data[16].timings.Asr);
+            $('.17magrib').html(data.data[16].timings.Maghrib);
+            $('.17isya').html(data.data[16].timings.Isha);
+
+            $('.18tanggal').html(data.data[17].date.readable);
+            $('.18imsyak').html(data.data[17].timings.Imsak);
+            $('.18subuh').html(data.data[17].timings.Fajr);
+            $('.18dzuhur').html(data.data[17].timings.Dhuhr);
+            $('.18ashar').html(data.data[17].timings.Asr);
+            $('.18magrib').html(data.data[17].timings.Maghrib);
+            $('.18isya').html(data.data[17].timings.Isha);
+
+            $('.19tanggal').html(data.data[18].date.readable);
+            $('.19imsyak').html(data.data[18].timings.Imsak);
+            $('.19subuh').html(data.data[18].timings.Fajr);
+            $('.19dzuhur').html(data.data[18].timings.Dhuhr);
+            $('.19ashar').html(data.data[18].timings.Asr);
+            $('.19magrib').html(data.data[18].timings.Maghrib);
+            $('.19isya').html(data.data[18].timings.Isha);
+
+            $('.20tanggal').html(data.data[19].date.readable);
+            $('.20imsyak').html(data.data[19].timings.Imsak);
+            $('.20subuh').html(data.data[19].timings.Fajr);
+            $('.20dzuhur').html(data.data[19].timings.Dhuhr);
+            $('.20ashar').html(data.data[19].timings.Asr);
+            $('.20magrib').html(data.data[19].timings.Maghrib);
+            $('.20isya').html(data.data[19].timings.Isha);
+
+            $('.21tanggal').html(data.data[20].date.readable);
+            $('.21imsyak').html(data.data[20].timings.Imsak);
+            $('.21subuh').html(data.data[20].timings.Fajr);
+            $('.21dzuhur').html(data.data[20].timings.Dhuhr);
+            $('.21ashar').html(data.data[20].timings.Asr);
+            $('.21magrib').html(data.data[20].timings.Maghrib);
+            $('.21isya').html(data.data[20].timings.Isha);
+
+            $('.22tanggal').html(data.data[21].date.readable);
+            $('.22imsyak').html(data.data[21].timings.Imsak);
+            $('.22subuh').html(data.data[21].timings.Fajr);
+            $('.22dzuhur').html(data.data[21].timings.Dhuhr);
+            $('.22ashar').html(data.data[21].timings.Asr);
+            $('.22magrib').html(data.data[21].timings.Maghrib);
+            $('.22isya').html(data.data[21].timings.Isha);
+
+            $('.23tanggal').html(data.data[22].date.readable);
+            $('.23imsyak').html(data.data[22].timings.Imsak);
+            $('.23subuh').html(data.data[22].timings.Fajr);
+            $('.23dzuhur').html(data.data[22].timings.Dhuhr);
+            $('.23ashar').html(data.data[22].timings.Asr);
+            $('.23magrib').html(data.data[22].timings.Maghrib);
+            $('.23isya').html(data.data[22].timings.Isha);
+
+            $('.24tanggal').html(data.data[23].date.readable);
+            $('.24imsyak').html(data.data[23].timings.Imsak);
+            $('.24subuh').html(data.data[23].timings.Fajr);
+            $('.24dzuhur').html(data.data[23].timings.Dhuhr);
+            $('.24ashar').html(data.data[23].timings.Asr);
+            $('.24magrib').html(data.data[23].timings.Maghrib);
+            $('.24isya').html(data.data[23].timings.Isha);
+
+            $('.25tanggal').html(data.data[24].date.readable);
+            $('.25imsyak').html(data.data[24].timings.Imsak);
+            $('.25subuh').html(data.data[24].timings.Fajr);
+            $('.25dzuhur').html(data.data[24].timings.Dhuhr);
+            $('.25ashar').html(data.data[24].timings.Asr);
+            $('.25magrib').html(data.data[24].timings.Maghrib);
+            $('.25isya').html(data.data[24].timings.Isha);
+
+            $('.26tanggal').html(data.data[25].date.readable);
+            $('.26imsyak').html(data.data[25].timings.Imsak);
+            $('.26subuh').html(data.data[25].timings.Fajr);
+            $('.26dzuhur').html(data.data[25].timings.Dhuhr);
+            $('.26ashar').html(data.data[25].timings.Asr);
+            $('.26magrib').html(data.data[25].timings.Maghrib);
+            $('.26isya').html(data.data[25].timings.Isha);
+
+            $('.27tanggal').html(data.data[26].date.readable);
+            $('.27imsyak').html(data.data[26].timings.Imsak);
+            $('.27subuh').html(data.data[26].timings.Fajr);
+            $('.27dzuhur').html(data.data[26].timings.Dhuhr);
+            $('.27ashar').html(data.data[26].timings.Asr);
+            $('.27magrib').html(data.data[26].timings.Maghrib);
+            $('.27isya').html(data.data[26].timings.Isha);
+
+            $('.28tanggal').html(data.data[27].date.readable);
+            $('.28imsyak').html(data.data[27].timings.Imsak);
+            $('.28subuh').html(data.data[27].timings.Fajr);
+            $('.28dzuhur').html(data.data[27].timings.Dhuhr);
+            $('.28ashar').html(data.data[27].timings.Asr);
+            $('.28magrib').html(data.data[27].timings.Maghrib);
+            $('.28isya').html(data.data[27].timings.Isha);
+
+            $('.29tanggal').html(data.data[28].date.readable);
+            $('.29imsyak').html(data.data[28].timings.Imsak);
+            $('.29subuh').html(data.data[28].timings.Fajr);
+            $('.29dzuhur').html(data.data[28].timings.Dhuhr);
+            $('.29ashar').html(data.data[28].timings.Asr);
+            $('.29magrib').html(data.data[28].timings.Maghrib);
+            $('.29isya').html(data.data[28].timings.Isha);
+
+            $('.30tanggal').html(data.data[29].date.readable);
+            $('.30imsyak').html(data.data[29].timings.Imsak);
+            $('.30subuh').html(data.data[29].timings.Fajr);
+            $('.30dzuhur').html(data.data[29].timings.Dhuhr);
+            $('.30ashar').html(data.data[29].timings.Asr);
+            $('.30magrib').html(data.data[29].timings.Maghrib);
+            $('.30isya').html(data.data[29].timings.Isha);
+
+            $('.31tanggal').html(data.data[30].date.readable);
+            $('.31imsyak').html(data.data[30].timings.Imsak);
+            $('.31subuh').html(data.data[30].timings.Fajr);
+            $('.31dzuhur').html(data.data[30].timings.Dhuhr);
+            $('.31ashar').html(data.data[30].timings.Asr);
+            $('.31magrib').html(data.data[30].timings.Maghrib);
+            $('.31isya').html(data.data[30].timings.Isha);
+        });
+    });
+    </script>
+
+    <style type="text/css">
+    	.fivesolidgreen { border: 3px solid green; }
+    </style>
+
 </head>
-<body>
-    
+<body style="background-color: #f1f1f1;">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">
+				<img src="https://cdn1.iconfinder.com/data/icons/ramadan-eid-al-fitr-1/256/muslim-praying-shalat-islam-512.png" width="100" height="100" class="d-inline-block align-top" alt="">
+
+			</a>
+			<nav class="navbar navbar-light bg-light">
+				<span class="navbar-brand mb-0 h1">Jadwal Shalat</span>
+			</nav>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="home.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="berita.html">Berita</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Doa & Dzikir</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="radio.html">Radio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="videodakwah.html">Video Dakwah</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">E-Book</a>
+					</li>
+				</ul>
+			</div>
+	</nav>
+	<div class="fivesolidgreen">
+		<h3 align="center">Waktu Saat Ini</h3>
+	<div id="clock" align="center" style="font-size: 25;">
+		<script type="text/javascript">
+		function showTime() {
+		    var a_p = "";
+		    var today = new Date();
+		    var curr_hour = today.getHours();
+		    var curr_minute = today.getMinutes();
+		    var curr_second = today.getSeconds();
+		    if (curr_hour < 12) {
+		        a_p = "AM";
+		    } else {
+		        a_p = "PM";
+		    }
+		    if (curr_hour == 0) {
+		        curr_hour = 12;
+		    }
+		    if (curr_hour > 12) {
+		        curr_hour = curr_hour - 12;
+		    }
+		    curr_hour = checkTime(curr_hour);
+		    curr_minute = checkTime(curr_minute);
+		    curr_second = checkTime(curr_second);
+		 document.getElementById('clock').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
+		    }
+ 
+		function checkTime(i) {
+		    if (i < 10) {
+		        i = "0" + i;
+		    }
+		    return i;
+		}
+		setInterval(showTime, 500);
+		//-->
+		</script>
+		</div>
+		<!-- Menampilkan Hari, Bulan dan Tahun -->
+		
+		<div align="center" style="font-size: 25; ">
+		<script type='text/javascript'>
+			var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+			var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+			var date = new Date();
+			var day = date.getDate();
+			var month = date.getMonth();
+			var thisDay = date.getDay(),
+			    thisDay = myDays[thisDay];
+			var yy = date.getYear();
+			var year = (yy < 1000) ? yy + 1900 : yy;
+			document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
+			//-->
+		</script>
+		</div>
+	</div>
+		<br>
+		
+	<div class="container">
+        <div class="row">
+			<h1>Jadwal Sholat Yogyakarta Bulan Juli</h1>
+            <table class="table table-striped">
+                <thead class="fivesolidgreen">
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Imsyak</th>
+                        <th>Subuh</th>
+                        <th>Dzuhur</th>
+                        <th>Ashar</th>
+                        <th>Magrib</th>
+                        <th>Isya</th>
+                    </tr>
+                </thead>
+                <tbody class="fivesolidgreen">
+                    <tr>
+                        <td class="1tanggal"></td>
+                        <td class="1imsyak"></td>
+                        <td class="1subuh"></td>
+                        <td class="1dzuhur"></td>
+                        <td class="1ashar"></td>
+                        <td class="1magrib"></td>
+                        <td class="1isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="2tanggal"></td>
+                        <td class="2imsyak"></td>
+                        <td class="2subuh"></td>
+                        <td class="2dzuhur"></td>
+                        <td class="2ashar"></td>
+                        <td class="2magrib"></td>
+                        <td class="2isya"></td>
+                    </tr>
+                     <tr>
+                        <td class="3tanggal"></td>
+                        <td class="3imsyak"></td>
+                        <td class="3subuh"></td>
+                        <td class="3dzuhur"></td>
+                        <td class="3ashar"></td>
+                        <td class="3magrib"></td>
+                        <td class="3isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="4tanggal"></td>
+                        <td class="4imsyak"></td>
+                        <td class="4subuh"></td>
+                        <td class="4dzuhur"></td>
+                        <td class="4ashar"></td>
+                        <td class="4magrib"></td>
+                        <td class="4isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="5tanggal"></td>
+                        <td class="5imsyak"></td>
+                        <td class="5subuh"></td>
+                        <td class="5dzuhur"></td>
+                        <td class="5ashar"></td>
+                        <td class="5magrib"></td>
+                        <td class="5isya"></td>
+                    </tr>
+                     <tr>
+                        <td class="6tanggal"></td>
+                        <td class="6imsyak"></td>
+                        <td class="6subuh"></td>
+                        <td class="6dzuhur"></td>
+                        <td class="6ashar"></td>
+                        <td class="6magrib"></td>
+                        <td class="6isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="7tanggal"></td>
+                        <td class="7imsyak"></td>
+                        <td class="7subuh"></td>
+                        <td class="7dzuhur"></td>
+                        <td class="7ashar"></td>
+                        <td class="7magrib"></td>
+                        <td class="7isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="8tanggal"></td>
+                        <td class="8imsyak"></td>
+                        <td class="8subuh"></td>
+                        <td class="8dzuhur"></td>
+                        <td class="8ashar"></td>
+                        <td class="8magrib"></td>
+                        <td class="8isya"></td>
+                    </tr>
+                     <tr>
+                        <td class="9tanggal"></td>
+                        <td class="9imsyak"></td>
+                        <td class="9subuh"></td>
+                        <td class="9dzuhur"></td>
+                        <td class="9ashar"></td>
+                        <td class="9magrib"></td>
+                        <td class="9isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="10tanggal"></td>
+                        <td class="10imsyak"></td>
+                        <td class="10subuh"></td>
+                        <td class="10dzuhur"></td>
+                        <td class="10ashar"></td>
+                        <td class="10magrib"></td>
+                        <td class="10isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="11tanggal"></td>
+                        <td class="11imsyak"></td>
+                        <td class="11subuh"></td>
+                        <td class="11dzuhur"></td>
+                        <td class="11ashar"></td>
+                        <td class="11magrib"></td>
+                        <td class="11isya"></td>
+                    </tr>
+                     <tr>
+                        <td class="12tanggal"></td>
+                        <td class="12imsyak"></td>
+                        <td class="12subuh"></td>
+                        <td class="12dzuhur"></td>
+                        <td class="12ashar"></td>
+                        <td class="12magrib"></td>
+                        <td class="12isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="13tanggal"></td>
+                        <td class="13imsyak"></td>
+                        <td class="13subuh"></td>
+                        <td class="13dzuhur"></td>
+                        <td class="13ashar"></td>
+                        <td class="13magrib"></td>
+                        <td class="13isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="14tanggal"></td>
+                        <td class="14imsyak"></td>
+                        <td class="14subuh"></td>
+                        <td class="14dzuhur"></td>
+                        <td class="14ashar"></td>
+                        <td class="14magrib"></td>
+                        <td class="14isya"></td>
+                    </tr>
+                     <tr>
+                        <td class="15tanggal"></td>
+                        <td class="15imsyak"></td>
+                        <td class="15subuh"></td>
+                        <td class="15dzuhur"></td>
+                        <td class="15ashar"></td>
+                        <td class="15magrib"></td>
+                        <td class="15isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="16tanggal"></td>
+                        <td class="16imsyak"></td>
+                        <td class="16subuh"></td>
+                        <td class="16dzuhur"></td>
+                        <td class="16ashar"></td>
+                        <td class="16magrib"></td>
+                        <td class="16isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="17tanggal"></td>
+                        <td class="17imsyak"></td>
+                        <td class="17subuh"></td>
+                        <td class="17dzuhur"></td>
+                        <td class="17ashar"></td>
+                        <td class="17magrib"></td>
+                        <td class="17isya"></td>
+                    </tr>
+                     <tr>
+                        <td class="18tanggal"></td>
+                        <td class="18imsyak"></td>
+                        <td class="18subuh"></td>
+                        <td class="18dzuhur"></td>
+                        <td class="18ashar"></td>
+                        <td class="18magrib"></td>
+                        <td class="18isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="19tanggal"></td>
+                        <td class="19imsyak"></td>
+                        <td class="19subuh"></td>
+                        <td class="19dzuhur"></td>
+                        <td class="19ashar"></td>
+                        <td class="19magrib"></td>
+                        <td class="19isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="20tanggal"></td>
+                        <td class="20imsyak"></td>
+                        <td class="20subuh"></td>
+                        <td class="20dzuhur"></td>
+                        <td class="20ashar"></td>
+                        <td class="20magrib"></td>
+                        <td class="20isya"></td>
+                    </tr>
+                     <tr>
+                        <td class="21tanggal"></td>
+                        <td class="21imsyak"></td>
+                        <td class="21subuh"></td>
+                        <td class="21dzuhur"></td>
+                        <td class="21ashar"></td>
+                        <td class="21magrib"></td>
+                        <td class="21isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="22tanggal"></td>
+                        <td class="22imsyak"></td>
+                        <td class="22subuh"></td>
+                        <td class="22dzuhur"></td>
+                        <td class="22ashar"></td>
+                        <td class="22magrib"></td>
+                        <td class="22isya"></td>
+                    </tr>
+                     <tr>
+                        <td class="23tanggal"></td>
+                        <td class="23imsyak"></td>
+                        <td class="23subuh"></td>
+                        <td class="23dzuhur"></td>
+                        <td class="23ashar"></td>
+                        <td class="23magrib"></td>
+                        <td class="23isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="24tanggal"></td>
+                        <td class="24imsyak"></td>
+                        <td class="24subuh"></td>
+                        <td class="24dzuhur"></td>
+                        <td class="24ashar"></td>
+                        <td class="24magrib"></td>
+                        <td class="24isya"></td>
+                    </tr>
+                     <tr>
+                        <td class="25tanggal"></td>
+                        <td class="25imsyak"></td>
+                        <td class="25subuh"></td>
+                        <td class="25dzuhur"></td>
+                        <td class="25ashar"></td>
+                        <td class="25magrib"></td>
+                        <td class="25isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="26tanggal"></td>
+                        <td class="26imsyak"></td>
+                        <td class="26subuh"></td>
+                        <td class="26dzuhur"></td>
+                        <td class="26ashar"></td>
+                        <td class="26magrib"></td>
+                        <td class="26isya"></td>
+                    </tr>
+                     <tr>
+                        <td class="27tanggal"></td>
+                        <td class="27imsyak"></td>
+                        <td class="27subuh"></td>
+                        <td class="27dzuhur"></td>
+                        <td class="27ashar"></td>
+                        <td class="27magrib"></td>
+                        <td class="27isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="28tanggal"></td>
+                        <td class="28imsyak"></td>
+                        <td class="28subuh"></td>
+                        <td class="28dzuhur"></td>
+                        <td class="28ashar"></td>
+                        <td class="28magrib"></td>
+                        <td class="28isya"></td>
+                    </tr>
+                     <tr>
+                        <td class="29tanggal"></td>
+                        <td class="29imsyak"></td>
+                        <td class="29subuh"></td>
+                        <td class="29dzuhur"></td>
+                        <td class="29ashar"></td>
+                        <td class="29magrib"></td>
+                        <td class="29isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="30tanggal"></td>
+                        <td class="30imsyak"></td>
+                        <td class="30subuh"></td>
+                        <td class="30dzuhur"></td>
+                        <td class="30ashar"></td>
+                        <td class="30magrib"></td>
+                        <td class="30isya"></td>
+                    </tr>
+                    <tr>
+                        <td class="31tanggal"></td>
+                        <td class="31imsyak"></td>
+                        <td class="31subuh"></td>
+                        <td class="31dzuhur"></td>
+                        <td class="31ashar"></td>
+                        <td class="31magrib"></td>
+                        <td class="31isya"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
