@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video Dakwah</title>
+
+    <script type="text/javascript">
+    $(function(){
+        var apiSolat = "http://api.aladhan.com/v1/calendarByAddress?address=Yogyakarta&method=2&month=07&year=2019";
+        $.getJSON(apiSolat, function(data,status){
+            $('.1tanggal').html(data.data[0].date.readable);
+            $('.1imsyak').html(data.data[0].timings.Imsak);
+            $('.1subuh').html(data.data[0].timings.Fajr);
+            $('.1dzuhur').html(data.data[0].timings.Dhuhr);
+            $('.1ashar').html(data.data[0].timings.Asr);
+            $('.1magrib').html(data.data[0].timings.Maghrib);
+            $('.1isya').html(data.data[0].timings.Isha);
+       });
+    });
+    </script>
+
+    <style type="text/css">
+        .fivesolidgreen { border: 3px solid green; }
+</style>
+<style>
+.fa {
+  padding: 20px;
+  font-size: 50px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+
+.fa-instagram {
+  background: #ff0080;
+  color: white;
+}
+</style>
+
+</head>
+
+<body style="background-color: #f1f1f1;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="https://cdn1.iconfinder.com/data/icons/ramadan-eid-al-fitr-1/256/muslim-praying-shalat-islam-512.png" width="100" height="100" class="d-inline-block align-top" alt="">
+
+            </a>
+            <nav class="navbar navbar-light bg-light">
+                <span class="navbar-brand mb-0 h1">Jadwal Shalat</span>
+            </nav>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="berita.html">Berita</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Doa & Dzikir</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="radio.html">Radio</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="videodakwah.html">Video Dakwah</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">E-Book</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    <br>
+        <div class="container">            
+            <div class="row">
+                <div class="col-md-6" align="center">
+                    <br>
+                    <h3 align="center">Silahkan Pilih Channel Video Dakwah</h3>
+                    <br>
+                        <select onchange="gantiVideo()" name="" id="selectOpt">
+                            <option value="https://www.youtube.com/embed/ZVML1pXQD-g">Teman Terbaik - Ustadz Ahmad Zainuddin, Lc.</option>
+                            <option value="https://www.youtube.com/embed/0e8d57NJCgg">Hukum Puasa Tapi Tidak Sholat – Ustadz Johan Saputra Halim M.H.I.</option>
+                            <option value="https://www.youtube.com/embed/Yh3kfuB7DlQ">Sedekah Setiap Hari, Bisa! - Ustadz Muhammad Elvy Syam, Lc.</option>
+                            <option value="https://www.youtube.com/embed/DPh6FFLOJEk">Hidup adalah Ujian - Ustadz Abu Ihsan Al-Maidany, MA.</option>                            
+                        </select>
+        <br>
+        <br>
+        <br> 
+            <iframe id="videoPlay" width="540" height="480"  controls="controls" src="https://www.youtube.com/embed/ZVML1pXQD-g"></iframe>
+                    <script>
+                        function gantiVideo() {
+                        var urlVideo = document.getElementById("selectOpt").value
+                        document.getElementById("videoPlay").src = urlVideo
+                        }
+                    </script>
+            </div>
+            <div class="col-md-6">
+                <div class="fivesolidgreen">
+                    <br>
+        <h3 align="center">Waktu Saat Ini</h3>
+    <div id="clock" align="center" style="font-size: 25;">
+        <script type="text/javascript">
+        function showTime() {
+            var a_p = "";
+            var today = new Date();
+            var curr_hour = today.getHours();
+            var curr_minute = today.getMinutes();
+            var curr_second = today.getSeconds();
+            if (curr_hour < 12) {
+                a_p = "AM";
+            } else {
+                a_p = "PM";
+            }
+            if (curr_hour == 0) {
+                curr_hour = 12;
+            }
+            if (curr_hour > 12) {
+                curr_hour = curr_hour - 12;
+            }
+            curr_hour = checkTime(curr_hour);
+            curr_minute = checkTime(curr_minute);
+            curr_second = checkTime(curr_second);
+         document.getElementById('clock').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
+            }
+ 
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+        setInterval(showTime, 500);
+        //-->
+        </script>
+        </div>
+        <div align="center" style="font-size: 25; ">
+        <script type='text/javascript' i>
+            var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+            var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.getMonth();
+            var thisDay = date.getDay(),
+                thisDay = myDays[thisDay];
+            var yy = date.getYear();
+            var year = (yy < 1000) ? yy + 1900 : yy;
+            document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
+            //-->
+        </script>
+        </div>
+    <br>
+    </div>
+    <br>
+        <div align="center" class="fivesolidgreen">
+            <br>
+        <h3>Jadwal Sholat Yogyakarta Hari Ini</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Imsyak</th>
+                        <th>Subuh</th>
+                        <th>Dzuhur</th>
+                        <th>Ashar</th>
+                        <th>Magrib</th>
+                        <th>Isya</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="1imsyak"></td>
+                        <td class="1subuh"></td>
+                        <td class="1dzuhur"></td>
+                        <td class="1ashar"></td>
+                        <td class="1magrib"></td>
+                        <td class="1isya"></td>
+                    </tr>
+                    </tbody>
+            </table>
+        <div align="center">
+            <h3>Instagram</h3>
+                <iframe src="http://instaembedder.com/gallery-v2.php?width=80&cols=3&rows=3&margin=8&color=gray&likes=1&share_buttons=1&comments=1&date=1&link=1&frame=1&image_border=8&frame_color=white&cid=11982&" frameborder="2" width="530px" height="280" align="center">
+                </iframe>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+</body>
+
+</html>
