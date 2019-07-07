@@ -29,8 +29,24 @@
     <style type="text/css">
         .fivesolidgreen { border: 3px solid #dcdada;
          border-radius: 10px;
-         border: 2px solid #dcdada; } }
-</style>
+         border: 2px solid #dcdada; }
+    </style>
+
+    <style type="text/css">
+        .radio { border: 3px solid #dcdada;
+    width: 555px;
+    height: 275px;  
+         border-radius: 10px;
+         border: 2px solid #dcdada; }
+    </style>
+
+        <style type="text/css">
+        .radioplay { border: 3px solid #dcdada;
+    width: 315px;
+    height: 60px; 
+         border-radius: 10px;
+         border: 2px solid #dcdada; }
+    </style>
 
 </head>
 <body style="background-color: #f1f1f1;">
@@ -57,22 +73,23 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Doa & Dzikir</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="radio.html">Radio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="videodakwah.html">Video Dakwah</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="#">E-Book</a>
                     </li>
                 </ul>
             </div>
     </nav>
     <br>
-    <div class="container">            
+    <div class="container">           
             <div class="row">
                 <div class="col-md-6" align="center">
+                    <div class="radio">
                     <br>
                     <h3 align="center">Silahkan Pilih Channel Radio</h3>
                     <br>
@@ -82,9 +99,11 @@
                             <option value="http://i.klikhost.com:8018/;rojer.mp3">Trendy FM Manado</option>
                             <option value="http://streaming.topfm951.net:9510/;stream.mp3">Top FM Bumiayu</option>
                         </select>
+
         <br>
         <br>
         <br> 
+            <div class="radioplay">
             <audio id="RadioPlay" controls="controls"><source src="http://scg.streamingmurah.com:7777/;stream.mp3" type="audio/mp3"></audio>
                     <script>
                         function gantiVideo() {
@@ -93,12 +112,15 @@
                         }
                     </script>
             </div>
+                </div>
+            </div>
             <div class="col-md-6">
                 <div class="fivesolidgreen">
                   <br>
         <h3 align="center">Waktu Saat Ini</h3>
     <div id="clock" align="center" style="font-size: 25;">
         <script type="text/javascript">
+        <!--
         function showTime() {
             var a_p = "";
             var today = new Date();
@@ -134,6 +156,7 @@
         </div>
         <div align="center" style="font-size: 25; ">
         <script type='text/javascript' i>
+            <!--
             var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
             var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
             var date = new Date();
@@ -152,7 +175,7 @@
     <br>
         <div align="center" class="fivesolidgreen">
           <br>
-        <h3>Jadwal Sholat Yogyakarta Hari Ini</h3>
+        <h3>Jadwal Sholat Hari Ini</h3>
             <table class="table table-striped">
                 <thead>
                     <tr>
